@@ -1,4 +1,4 @@
-package com.example.JUC;
+package com.example.JUC.U1;
 
 public class Test_多线程交替输出_synchronized {
     /**

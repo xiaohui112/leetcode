@@ -1,4 +1,4 @@
-package com.example.JUC;
+package com.example.JUC.U1;
 
 import lombok.extern.slf4j.Slf4j;
 

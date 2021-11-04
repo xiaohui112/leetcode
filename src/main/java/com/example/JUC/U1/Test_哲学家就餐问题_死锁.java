@@ -1,8 +1,6 @@
-package com.example.JUC;
+package com.example.JUC.U1;
 
 import lombok.extern.slf4j.Slf4j;
-
-import java.util.StringJoiner;
 
 public class Test_哲学家就餐问题_死锁 {
     public static void main(String[] args){

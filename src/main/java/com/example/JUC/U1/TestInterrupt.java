@@ -1,4 +1,4 @@
-package com.example.JUC;
+package com.example.JUC.U1;
 
 public class TestInterrupt {
     public static void main(String[] args) throws InterruptedException {

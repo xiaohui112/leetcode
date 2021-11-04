@@ -1,4 +1,4 @@
-package com.example.JUC;
+package com.example.JUC.U1;
 
 public class Test {
 
