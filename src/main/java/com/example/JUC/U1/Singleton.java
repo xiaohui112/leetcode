@@ -21,7 +21,20 @@ public final class Singleton {
         }
     }
 }
-
+final class Single{
+    private Single(){}
+    private static volatile Single single = null;
+    public static Single getInstance(){
+        if(single==null){
+            synchronized(Single.class){
+                if(single==null){
+                    single = new Single();
+                }
+            }
+        }
+        return single;
+    }
+}
 final class Singleton_doublechecked{
     private Singleton_doublechecked(){}
     //volatile 保证变量的 可见性，有序性
@@ -31,7 +44,7 @@ final class Singleton_doublechecked{
         if(INSTANCE == null){//优化性能，不用每次调用方法，都去竞争锁。但是多个线程中间
             synchronized (Singleton_doublechecked.class){
                 if(INSTANCE == null){
-                    //字节码指令 可能存在重排序，导致先给INSTANCE赋值，在调用Singleton_doublechecked类的构造方法，这样线程之间无法保证INSTANCE的有序性。见图片 Singleton.png
+                    //字节码指令 可能存在重排序，导致先给INSTANCE赋值，再调用Singleton_doublechecked类的构造方法，这样线程之间无法保证INSTANCE的有序性。见图片 Singleton.png
                     //INSTANCE 加上volatile关键字，禁止了指令重排序。保证了并发线程的有序性。
                     INSTANCE = new Singleton_doublechecked();
                 }

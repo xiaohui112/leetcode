@@ -1,6 +1,6 @@
 package com.example.spring.AOP.CGlibDynamicProxy;
 
-import AOP.jdkDynamicProxy.RealSubject;
+import com.example.spring.AOP.jdkDynamicProxy.RealSubject;
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
